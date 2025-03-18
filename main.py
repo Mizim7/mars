@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, json
 import os
+import random
+
+
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/image'
@@ -101,6 +104,14 @@ def gallery():
     images = [filename for filename in os.listdir(app.config['UPLOAD_FOLDER']) if
               filename.endswith(('.png', '.jpg', '.jpeg'))]
     return render_template('gallery.html', images=images)
+
+
+@app.route('/member')
+def member():
+    with open('templates/crew.json', encoding='utf-8') as f:
+        crew = json.load(f)
+    member = random.choice(crew)
+    return render_template('member.html', member=member)
 
 
 if __name__ == '__main__':

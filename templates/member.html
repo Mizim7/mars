@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5 text-center"> <!-- Добавляем класс text-center -->
+        <h2>{{ member.name }} {{ member.surname }}</h2>
+        <img src="{{ url_for('static', filename=member.photo) }}" alt="{{ member.name }} {{ member.surname }}"
+             style="max-width: 300px; margin: 20px auto; display: block;">
+        <p style="font-size: 18px;">{{ member.professions|join(', ') }}</p>
+    </div>
+{% endblock %}

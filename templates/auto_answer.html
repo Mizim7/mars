@@ -2,6 +2,9 @@
 
 {% block content %}
     <div class="container mt-5">
+        <img src="{{ url_for('static', filename='images/mission_to_mars.png') }}" alt="Эмблема миссии"
+             class="emblem mb-4">
+
         <h2>Результаты анкеты</h2>
         <p><strong>Фамилия:</strong> {{ surname }}</p>
         <p><strong>Имя:</strong> {{ name }}</p>

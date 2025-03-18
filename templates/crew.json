@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Энди",
+        "surname": "Уир",
+        "photo": "images/andy_weir.png",
+        "professions": ["астрогеолог", "специалист по радиационной защите"]
+    },
+    {
+        "name": "Ридли",
+        "surname": "Скотт",
+        "photo": "images/ridley_scott.png",
+        "professions": ["режиссер", "сценарист"]
+    }
+]
