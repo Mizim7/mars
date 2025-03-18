@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Результаты анкеты</h2>
+        <p><strong>Фамилия:</strong> {{ surname }}</p>
+        <p><strong>Имя:</strong> {{ name }}</p>
+        <p><strong>Образование:</strong> {{ education }}</p>
+        <p><strong>Профессия:</strong> {{ profession }}</p>
+        <p><strong>Пол:</strong> {{ sex }}</p>
+        <p><strong>Мотивация:</strong> {{ motivation }}</p>
+        <p><strong>Готовы остаться на Марсе?</strong> {{ ready }}</p>
+    </div>
+{% endblock %}

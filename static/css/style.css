@@ -1,0 +1,13 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h4 {
+    color: #ff6b6b; /* Изменение цвета заголовка 4 уровня */
+    padding-left: 20px; /* Добавление внутреннего отступа слева */
+}
+
+.emblem {
+    width: 200px;
+    margin-bottom: 20px;
+}

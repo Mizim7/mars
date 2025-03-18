@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Пейзажи Марса</h2>
+        {% for image in images %}
+            <img src="{{ url_for('static', filename='image/' + image) }}" alt="Пейзаж Марса" style="max-width: 100%; margin-bottom: 10px;">
+        {% endfor %}
+        
+        <form method="post" enctype="multipart/form-data">
+            <label for="image">Добавить картинку</label>
+            <input type="file" id="image" name="image">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+{% endblock %}

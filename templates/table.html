@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Оформление каюты</h2>
+        <table border="1" style="width: 400px; height: 400px;">
+            <tr>
+                <td rowspan="2" style="background-color: {{ color }}; width: 200px; height: 400px;">
+                    Цвет стен
+                </td>
+                <td style="background-color: #f0e6d2; width: 200px; height: 200px;">
+                    Возраст
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #f0e6d2; width: 200px; height: 200px;">
+                    {% if age < 21 %}
+                        <img src="{{ url_for('static', filename='images/mars_child.jpg') }}" alt="Марсианин-ребенок" style="max-width: 100%; max-height: 100%;">
+                    {% else %}
+                        <img src="{{ url_for('static', filename='images/mars_adult.jpg') }}" alt="Марсианин-взрослый" style="max-width: 100%; max-height: 100%;">
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

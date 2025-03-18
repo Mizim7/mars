@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        {% if 'инженер' in prof.lower() or 'строитель' in prof.lower() %}
+            <h2>Инженерные тренажеры</h2>
+            <img src="{{ url_for('static', filename='images/engineering_simulators.jpg') }}" alt="Схема инженерных тренажеров" class="img-fluid">
+        {% else %}
+            <h2>Научные симуляторы</h2>
+            <img src="{{ url_for('static', filename='images/scientific_simulators.jpg') }}" alt="Схема научных симуляторов" class="img-fluid">
+        {% endif %}
+    </div>
+{% endblock %}
